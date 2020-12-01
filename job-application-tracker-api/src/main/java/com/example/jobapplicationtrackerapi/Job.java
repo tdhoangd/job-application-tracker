@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import javax.validation.constraints.NotBlank;
+
 
 import java.util.Date;
 
@@ -16,8 +18,11 @@ public class Job {
     private String id;
     private Date date;
     private String title;
-    private String linkedinId;
+    private String note;
+
+    @NotBlank
     private String status;
-    private String jobLocation;
+    private String location;
     private String company;
+    private String description;
 }
